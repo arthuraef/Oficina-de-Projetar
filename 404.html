@@ -40,6 +40,68 @@ a[href^="tel"]{
 }
 </style>
     <!-- End of headEnd -->
+
+<style id="trama-tiling-style">
+/* Tiled trama pattern: horizontal repetition across full screen width */
+.framer-hw7wU .framer-1ilkk6t,
+.framer-hw7wU .framer-u8qye5,
+.framer-1ilkk6t,
+.framer-u8qye5 {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  gap: 0 !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  left: 0 !important;
+  right: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
+
+.framer-hw7wU .framer-1ilkk6t .framer-1o452e3,
+.framer-hw7wU .framer-1ilkk6t .framer-khp7pc,
+.framer-hw7wU .framer-u8qye5 .framer-sc7430,
+.framer-hw7wU .framer-u8qye5 .framer-h5qf6z,
+.framer-1o452e3,
+.framer-khp7pc,
+.framer-sc7430,
+.framer-h5qf6z,
+.trama-tile-item {
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: auto !important;
+  bottom: auto !important;
+  flex: 0 0 1187.38px !important;
+  width: 1187.38px !important;
+  height: 59px !important;
+  min-width: 1187.38px !important;
+  max-width: 1187.38px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.framer-1ilkk6t .svgContainer,
+.framer-u8qye5 .svgContainer,
+.trama-tile-item .svgContainer {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.framer-1ilkk6t svg,
+.framer-u8qye5 svg,
+.trama-tile-item svg {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+}
+</style>
+
 </head>
 <body>
     <script async src="https://events.framer.com/script?v=2" data-fid="f72ebed37799ddc69257fb8a4c3b45a0cd6b65ef326dd3543c7fb925a493dc0f" data-no-nt></script>
@@ -100,5 +162,54 @@ a[href^="tel"]{
     <!-- Start of bodyEnd -->
     
     <!-- End of bodyEnd -->
+
+<script id="trama-tiling-script">
+(function() {
+  function multiplyTrama() {
+    var containers = document.querySelectorAll('.framer-1ilkk6t, .framer-u8qye5');
+    if (!containers.length) return;
+    
+    var tileWidth = 1187.38;
+    var screenW = Math.max(window.innerWidth || 0, document.documentElement.clientWidth || 0, screen.width || 0, 1920);
+    var needed = Math.max(2, Math.ceil(screenW / tileWidth) + 1);
+
+    containers.forEach(function(container) {
+      container.style.display = 'flex';
+      container.style.flexFlow = 'row nowrap';
+      container.style.gap = '0px';
+      container.style.width = '100vw';
+      container.style.left = '0';
+      container.style.right = '0';
+      container.style.overflow = 'hidden';
+
+      var currentTiles = container.querySelectorAll('.framer-1o452e3, .framer-khp7pc, .framer-sc7430, .framer-h5qf6z, .trama-tile-item');
+      var count = currentTiles.length;
+      while (count < needed) {
+        var clone = document.createElement('div');
+        clone.className = 'trama-tile-item';
+        clone.setAttribute('data-framer-component-type', 'SVG');
+        clone.setAttribute('data-framer-name', 'trama');
+        clone.setAttribute('aria-hidden', 'true');
+        clone.style.cssText = 'image-rendering:pixelated;flex-shrink:0;fill:rgba(0,0,0,1);color:rgba(0,0,0,1);flex:0 0 1187.38px;width:1187.38px;height:59px;';
+        clone.innerHTML = '<div class="svgContainer" style="width:100%;height:100%;aspect-ratio:inherit"><svg style="width:100%;height:100%;" viewBox="0 0 1288 64"><use href="#svg1772196879_8678"/></svg></div>';
+        container.appendChild(clone);
+        count++;
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', multiplyTrama);
+  } else {
+    multiplyTrama();
+  }
+  window.addEventListener('resize', multiplyTrama);
+  window.addEventListener('load', multiplyTrama);
+  [50, 150, 300, 600, 1200, 2500].forEach(function(t) {
+    setTimeout(multiplyTrama, t);
+  });
+})();
+</script>
+
 </body>
 </html>
