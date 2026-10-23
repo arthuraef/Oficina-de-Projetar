@@ -1,0 +1,28 @@
+{
+  "titulo": "Você inspira. Nós projetamos.",
+  "etapas": [
+    {
+      "numero": "1.",
+      "nome": "Mergulho",
+      "descricao": "Conversamos para compreender seu modo de viver, referências estéticas, rotina e ambições. Esse entendimento é o alicerce do projeto."
+    },
+    {
+      "numero": "2.",
+      "nome": "Afinação",
+      "descricao": "Traduzimos suas ideias em formas, volumes e fluxos, buscando equilíbrio entre luz, ventilação e paisagem."
+    },
+    {
+      "numero": "3.",
+      "nome": "Desenho executivo",
+      "descricao": "Refinamos cada detalhe — plantas, cortes, especificações de materiais e soluções construtivas — preparando tudo para o canteiro."
+    },
+    {
+      "numero": "4.",
+      "nome": "Acompanhamento",
+      "descricao": "Fiscalizamos a execução, zelamos pela fidelidade ao desenho original e cuidamos da entrega com rigor técnico e proximidade."
+    }
+  ],
+  "cta_titulo": "Pronto para começar?",
+  "cta_botao": "Faça seu projeto acontecer",
+  "whatsapp_msg": "Olá! Estou pronto para iniciar o meu projeto com a Oficina de Projetar."
+}

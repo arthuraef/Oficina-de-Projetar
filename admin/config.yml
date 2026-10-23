@@ -1,0 +1,112 @@
+backend:
+  name: github
+  repo: arthuraef/Oficina-de-Projetar
+  branch: main
+
+# Habilita modo local de desenvolvimento caso desejado
+local_backend: true
+
+media_folder: "assets/images"
+public_folder: "assets/images"
+
+site_url: "https://arthuraef.github.io/Oficina-de-Projetar/"
+display_url: "https://arthuraef.github.io/Oficina-de-Projetar/"
+logo_url: "../assets/images/yuLAfgpjAqVltISUSQXkPffkg.svg"
+
+collections:
+  - name: "configuracoes"
+    label: "Configurações Gerais & Contato"
+    files:
+      - file: "content/geral.json"
+        label: "Dados da Empresa e Contato"
+        name: "geral"
+        fields:
+          - { label: "Nome da Empresa", name: "nome", widget: "string" }
+          - { label: "Título SEO", name: "titulo_seo", widget: "string" }
+          - { label: "Descrição SEO", name: "descricao_seo", widget: "text" }
+          - { label: "E-mail de Contato", name: "email", widget: "string" }
+          - { label: "Telefone de Contato", name: "telefone", widget: "string" }
+          - { label: "WhatsApp (Apenas Números com DDD)", name: "whatsapp", widget: "string" }
+          - { label: "Endereço Completo", name: "endereco", widget: "text" }
+          - { label: "Link do Google Maps", name: "maps_url", widget: "string" }
+          - { label: "Instagram URL", name: "instagram_url", widget: "string" }
+          - { label: "Texto de Copyright", name: "copyright", widget: "string" }
+
+  - name: "hero"
+    label: "Seção Hero (Abertura)"
+    files:
+      - file: "content/hero.json"
+        label: "Conteúdo do Hero"
+        name: "hero_content"
+        fields:
+          - { label: "Título Principal (H1)", name: "titulo", widget: "string" }
+          - { label: "Subtítulo / Apresentação", name: "subtitulo", widget: "text" }
+          - { label: "Texto do Botão de Contato", name: "botao_texto", widget: "string" }
+          - { label: "Mensagem Pré-definida do WhatsApp", name: "whatsapp_msg", widget: "string" }
+          - { label: "Imagem Principal de Fundo", name: "imagem_fundo", widget: "image" }
+
+  - name: "manifesto"
+    label: "Manifesto & Valores"
+    files:
+      - file: "content/manifesto.json"
+        label: "Texto Institucional"
+        name: "manifesto_content"
+        fields:
+          - { label: "Título da Seção (H2)", name: "titulo", widget: "string" }
+          - { label: "Parágrafo 1 - Mapeamento", name: "p1", widget: "text" }
+          - { label: "Parágrafo 2 - Precisão e Materiais", name: "p2", widget: "text" }
+          - { label: "Parágrafo 3 - Parceria e Rigor", name: "p3", widget: "text" }
+          - { label: "Texto do Botão", name: "botao_texto", widget: "string" }
+          - { label: "Mensagem do WhatsApp", name: "whatsapp_msg", widget: "string" }
+          - { label: "Imagem Ilustrativa", name: "imagem", widget: "image" }
+
+  - name: "especialidades"
+    label: "Tipologias & Especialidades"
+    files:
+      - file: "content/especialidades.json"
+        label: "Soluções Sob Medida"
+        name: "especialidades_content"
+        fields:
+          - { label: "Título da Seção (H2)", name: "titulo", widget: "string" }
+          - { label: "Texto de Introdução", name: "introducao", widget: "text" }
+          - { label: "Texto do Botão", name: "botao_texto", widget: "string" }
+          - { label: "Mensagem do WhatsApp", name: "whatsapp_msg", widget: "string" }
+          - label: "Lista de Especialidades"
+            name: "itens"
+            widget: "list"
+            fields:
+              - { label: "Nome da Especialidade", name: "titulo", widget: "string" }
+
+  - name: "video_section"
+    label: "Seção Vídeo (Arquitetura que Respira)"
+    files:
+      - file: "content/video.json"
+        label: "Vídeo Institucional"
+        name: "video_content"
+        fields:
+          - { label: "Título da Seção (H2)", name: "titulo", widget: "string" }
+          - { label: "Texto 1", name: "texto1", widget: "text" }
+          - { label: "Texto 2", name: "texto2", widget: "text" }
+          - { label: "Texto do Botão", name: "botao_texto", widget: "string" }
+          - { label: "Mensagem do WhatsApp", name: "whatsapp_msg", widget: "string" }
+          - { label: "Arquivo de Vídeo", name: "video", widget: "file" }
+          - { label: "Imagem de Capa (Poster)", name: "poster", widget: "image" }
+
+  - name: "processo"
+    label: "Metodologia & Etapas"
+    files:
+      - file: "content/processo.json"
+        label: "Etapas do Projeto"
+        name: "processo_content"
+        fields:
+          - { label: "Título da Seção", name: "titulo", widget: "string" }
+          - label: "Etapas"
+            name: "etapas"
+            widget: "list"
+            fields:
+              - { label: "Número", name: "numero", widget: "string" }
+              - { label: "Nome da Etapa", name: "nome", widget: "string" }
+              - { label: "Descrição", name: "descricao", widget: "text" }
+          - { label: "Chamada Final (CTA)", name: "cta_titulo", widget: "string" }
+          - { label: "Texto do Botão CTA", name: "cta_botao", widget: "string" }
+          - { label: "Mensagem do WhatsApp", name: "whatsapp_msg", widget: "string" }

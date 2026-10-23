@@ -1,0 +1,14 @@
+{
+  "titulo": "Soluções sob medida para cada estilo de vida",
+  "introducao": "Na Oficina de Projetar, não existem fórmulas prontas.\nCada projeto nasce do diálogo entre local, clima e personalidade de quem habita.\nSeja em um refúgio costeiro, um loft urbano, um chalé de montanha ou no seu escritório criativo, entregamos ambientes com conforto e ergonomia, conexão contínua com a luz e a ventilação natural, materiais duráveis e acabamentos refinados",
+  "botao_texto": "Conheça nossos projetos e inspire‑se",
+  "whatsapp_msg": "Olá! Gostaria de conhecer projetos realizados pela Oficina de Projetar.",
+  "itens": [
+    { "titulo": "Refúgios à beira‑mar" },
+    { "titulo": "Centros de convivência urbanos" },
+    { "titulo": "Casas de campo e retiros" },
+    { "titulo": "Espaços corporativos e criativos" },
+    { "titulo": "Projetos especiais sob medida" },
+    { "titulo": "+Mais" }
+  ]
+}
