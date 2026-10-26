@@ -118,6 +118,147 @@ h1, h2, h3 {
 }
 </style>
 
+
+<style id="custom-carousel-style">
+/* Oficina de Projetar - Dynamic CMS Carousel */
+.odp-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  user-select: none;
+  background-color: #121212;
+}
+
+@media (min-width: 1690px) {
+  .odp-carousel-wrapper { height: 740px; }
+}
+@media (min-width: 810px) and (max-width: 1199.98px) {
+  .odp-carousel-wrapper { height: 460px; }
+}
+@media (max-width: 809.98px) {
+  .odp-carousel-wrapper { height: 320px; }
+}
+
+.odp-carousel-track {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.odp-carousel-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.odp-carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Arrow buttons */
+.odp-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.25s ease;
+  outline: none;
+  padding: 0;
+}
+
+.odp-carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.odp-carousel-btn.prev {
+  left: 24px;
+}
+
+.odp-carousel-btn.next {
+  right: 24px;
+}
+
+@media (max-width: 809.98px) {
+  .odp-carousel-btn {
+    width: 38px;
+    height: 38px;
+  }
+  .odp-carousel-btn.prev { left: 12px; }
+  .odp-carousel-btn.next { right: 12px; }
+}
+
+.odp-carousel-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Dots Indicators */
+.odp-carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+}
+
+.odp-carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  padding: 0;
+}
+
+.odp-carousel-dot.active {
+  background: #ffffff;
+  transform: scale(1.3);
+  width: 18px;
+  border-radius: 4px;
+}
+
+/* Hide Framer low-opacity carousel container when dynamic carousel is active */
+.framer-1mvjsn .framer-1wyxaut-container {
+  display: none !important;
+}
+</style>
+
 </head>
 <body>
     <script async src="https://events.framer.com/script?v=2" data-fid="f72ebed37799ddc69257fb8a4c3b45a0cd6b65ef326dd3543c7fb925a493dc0f" data-no-nt></script>
@@ -224,6 +365,228 @@ h1, h2, h3 {
   [50, 150, 300, 600, 1200, 2500].forEach(function(t) {
     setTimeout(multiplyTrama, t);
   });
+})();
+</script>
+
+
+<script id="custom-carousel-script">
+(function() {
+  var defaultCarrosselData = {
+    autoplay: true,
+    intervalo: 4,
+    velocidade: 0.8,
+    mostrar_setas: true,
+    mostrar_indicadores: false,
+    pausar_no_hover: true,
+    imagens: [
+      { imagem: "assets/images/ktFqjROXHKQb2BCE5rm6bmuNSEU.jpg", legenda: "Fachada Contemporânea com Integração Natural" },
+      { imagem: "assets/images/hD5O6iUfbFqHc3YVYgtxZYfaKsU.jpg", legenda: "Área de Convivência Externa com Piscina" },
+      { imagem: "assets/images/PNIQl9VDdj3ta1DLRXoKBWhIg.jpg", legenda: "Living com Pé-Direito Duplo e Iluminação Zenital" },
+      { imagem: "assets/images/HC6dAzcHC2DSyF1Jx0Rhlih87w.jpg", legenda: "Varanda Gourmet com Ripado em Madeira Nobre" },
+      { imagem: "assets/images/xZViHSln6F45WpE13a1yrFW0ddo.jpg", legenda: "Suíte Master com Vista Panorâmica" },
+      { imagem: "assets/images/Pprk3lpKm5ulnZ5fy15VAzAg.png", legenda: "Ambiente Integrado com Texturas Minerais" },
+      { imagem: "assets/images/KOUDar8ie74lIuCibymBZyHlEQ.png", legenda: "Residência de Praia com Pergolado em Balanço" },
+      { imagem: "assets/images/fAIpFRFH0deXz1MTePKJBDXwKqs.png", legenda: "Espaço Gourmet e Lounge Noturno" },
+      { imagem: "assets/images/Zn76vfLr9nXkDg5tfM3PLwJ8dsI.png", legenda: "Jardim Interno e Conexão com a Natureza" },
+      { imagem: "assets/images/zGqH2XPr5SL5LYPw1JvY2c9x5F4.png", legenda: "Arquitetura com Volumes Geométricos Puros" },
+      { imagem: "assets/images/94GphaXCTN4D8xwUgC3j9yJMQ.jpg", legenda: "Sala de Estar Minimalista e Sofisticada" },
+      { imagem: "assets/images/9EgtMwTy90XiO37XDmV6NV5O4Q.jpg", legenda: "Escritório Corporativo Criativo" },
+      { imagem: "assets/images/Sm9D6gxhmcCNv6EsqiS2QbH18g.jpg", legenda: "Cozinha Integrada com Bancada em Quartzo" },
+      { imagem: "assets/images/T8QS7WIP6K03vCnbuBi9s732Hw4.jpg", legenda: "Área Externa com Deck de Madeira e Fogo de Chão" },
+      { imagem: "assets/images/NqTyx68km5muWT2fEMntIDY.jpg", legenda: "Casa de Campo com Estrutura Aparente" },
+      { imagem: "assets/images/uqQ7iyPbTMRxIR2Enn8amm4U.jpg", legenda: "Entrada Social com Painel Ripado e Paisagismo" },
+      { imagem: "assets/images/Xpl5uA7OXZrrorDgyzqVYFDCwk.jpg", legenda: "Espaço Relax com Banheira de Imersão e Luz Solar" },
+      { imagem: "assets/images/cSukkgLXUiTHAgvRzUH6DUnw3k.jpg", legenda: "Terraço Panorâmico com Mobiliário Assinado" },
+      { imagem: "assets/images/bdLj6BTkqJ70lAOHzWdzhnGWZ0.jpg", legenda: "Hall de Entrada com Pé-Direito Triplo" },
+      { imagem: "assets/images/ePH7nQdaJHrrGfDDvO74Q9XT18.jpg", legenda: "Lounge Externo com Vista para o Pôr do Sol" }
+    ]
+  };
+
+  function initCarousel() {
+    var galleryContainer = document.querySelector('.framer-1mvjsn[data-framer-name="Galery"]');
+    if (!galleryContainer) return;
+    if (galleryContainer.querySelector('.odp-carousel-wrapper')) return;
+
+    fetch('content/carrossel.json')
+      .then(function(res) {
+        if (!res.ok) throw new Error('Network error');
+        return res.json();
+      })
+      .then(function(data) {
+        buildCarousel(galleryContainer, data);
+      })
+      .catch(function(err) {
+        buildCarousel(galleryContainer, defaultCarrosselData);
+      });
+  }
+
+  function buildCarousel(container, config) {
+    if (container.querySelector('.odp-carousel-wrapper')) return;
+
+    var images = config.imagens || [];
+    if (!images.length) return;
+
+    var autoplay = config.autoplay !== false;
+    var intervalSec = parseFloat(config.intervalo) || 4;
+    var speedSec = parseFloat(config.velocidade) || 0.8;
+    var showArrows = config.mostrar_setas !== false;
+    var showDots = config.mostrar_indicadores === true;
+    var pauseOnHover = config.pausar_no_hover !== false;
+
+    var wrapper = document.createElement('div');
+    wrapper.className = 'odp-carousel-wrapper';
+
+    var track = document.createElement('div');
+    track.className = 'odp-carousel-track';
+    track.style.transition = 'transform ' + speedSec + 's cubic-bezier(0.25, 1, 0.5, 1)';
+
+    images.forEach(function(item) {
+      var slide = document.createElement('div');
+      slide.className = 'odp-carousel-slide';
+      var img = document.createElement('img');
+      img.src = item.imagem;
+      img.alt = item.legenda || 'Projeto Oficina de Projetar';
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      slide.appendChild(img);
+      track.appendChild(slide);
+    });
+
+    wrapper.appendChild(track);
+
+    var currentIndex = 0;
+    var totalSlides = images.length;
+    var timer = null;
+
+    function goToSlide(index) {
+      if (index < 0) {
+        currentIndex = totalSlides - 1;
+      } else if (index >= totalSlides) {
+        currentIndex = 0;
+      } else {
+        currentIndex = index;
+      }
+      track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+      updateDots();
+    }
+
+    function nextSlide() {
+      goToSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      goToSlide(currentIndex - 1);
+    }
+
+    function startAutoplay() {
+      if (!autoplay || timer) return;
+      timer = setInterval(nextSlide, intervalSec * 1000);
+    }
+
+    function stopAutoplay() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    if (showArrows) {
+      var prevBtn = document.createElement('button');
+      prevBtn.className = 'odp-carousel-btn prev';
+      prevBtn.setAttribute('aria-label', 'Slide anterior');
+      prevBtn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>';
+      prevBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        prevSlide();
+        stopAutoplay();
+        startAutoplay();
+      });
+      wrapper.appendChild(prevBtn);
+
+      var nextBtn = document.createElement('button');
+      nextBtn.className = 'odp-carousel-btn next';
+      nextBtn.setAttribute('aria-label', 'Próximo slide');
+      nextBtn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>';
+      nextBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        nextSlide();
+        stopAutoplay();
+        startAutoplay();
+      });
+      wrapper.appendChild(nextBtn);
+    }
+
+    var dots = [];
+    if (showDots) {
+      var dotsContainer = document.createElement('div');
+      dotsContainer.className = 'odp-carousel-dots';
+      for (var i = 0; i < totalSlides; i++) {
+        (function(idx) {
+          var dot = document.createElement('button');
+          dot.className = 'odp-carousel-dot' + (idx === 0 ? ' active' : '');
+          dot.setAttribute('aria-label', 'Ir para slide ' + (idx + 1));
+          dot.addEventListener('click', function(e) {
+            e.stopPropagation();
+            goToSlide(idx);
+            stopAutoplay();
+            startAutoplay();
+          });
+          dotsContainer.appendChild(dot);
+          dots.push(dot);
+        })(i);
+      }
+      wrapper.appendChild(dotsContainer);
+    }
+
+    function updateDots() {
+      if (!dots.length) return;
+      dots.forEach(function(dot, idx) {
+        if (idx === currentIndex) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    }
+
+    if (pauseOnHover) {
+      wrapper.addEventListener('mouseenter', stopAutoplay);
+      wrapper.addEventListener('mouseleave', startAutoplay);
+    }
+
+    var startX = 0;
+    var diffX = 0;
+    wrapper.addEventListener('touchstart', function(e) {
+      startX = e.touches[0].clientX;
+      diffX = 0;
+      stopAutoplay();
+    }, { passive: true });
+
+    wrapper.addEventListener('touchmove', function(e) {
+      diffX = e.touches[0].clientX - startX;
+    }, { passive: true });
+
+    wrapper.addEventListener('touchend', function() {
+      if (diffX > 50) {
+        prevSlide();
+      } else if (diffX < -50) {
+        nextSlide();
+      }
+      startAutoplay();
+    });
+
+    container.appendChild(wrapper);
+    startAutoplay();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCarousel);
+  } else {
+    initCarousel();
+  }
+  setTimeout(initCarousel, 100);
+  setTimeout(initCarousel, 500);
+  setTimeout(initCarousel, 1500);
 })();
 </script>
 

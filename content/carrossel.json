@@ -1,0 +1,90 @@
+{
+  "autoplay": true,
+  "intervalo": 4,
+  "velocidade": 0.8,
+  "mostrar_setas": true,
+  "mostrar_indicadores": false,
+  "pausar_no_hover": true,
+  "imagens": [
+    {
+      "imagem": "assets/images/ktFqjROXHKQb2BCE5rm6bmuNSEU.jpg",
+      "legenda": "Fachada Contemporânea com Integração Natural"
+    },
+    {
+      "imagem": "assets/images/hD5O6iUfbFqHc3YVYgtxZYfaKsU.jpg",
+      "legenda": "Área de Convivência Externa com Piscina"
+    },
+    {
+      "imagem": "assets/images/PNIQl9VDdj3ta1DLRXoKBWhIg.jpg",
+      "legenda": "Living com Pé-Direito Duplo e Iluminação Zenital"
+    },
+    {
+      "imagem": "assets/images/HC6dAzcHC2DSyF1Jx0Rhlih87w.jpg",
+      "legenda": "Varanda Gourmet com Ripado em Madeira Nobre"
+    },
+    {
+      "imagem": "assets/images/xZViHSln6F45WpE13a1yrFW0ddo.jpg",
+      "legenda": "Suíte Master com Vista Panorâmica"
+    },
+    {
+      "imagem": "assets/images/Pprk3lpKm5ulnZ5fy15VAzAg.png",
+      "legenda": "Ambiente Integrado com Texturas Minerais"
+    },
+    {
+      "imagem": "assets/images/KOUDar8ie74lIuCibymBZyHlEQ.png",
+      "legenda": "Residência de Praia com Pergolado em Balanço"
+    },
+    {
+      "imagem": "assets/images/fAIpFRFH0deXz1MTePKJBDXwKqs.png",
+      "legenda": "Espaço Gourmet e Lounge Noturno"
+    },
+    {
+      "imagem": "assets/images/Zn76vfLr9nXkDg5tfM3PLwJ8dsI.png",
+      "legenda": "Jardim Interno e Conexão com a Natureza"
+    },
+    {
+      "imagem": "assets/images/zGqH2XPr5SL5LYPw1JvY2c9x5F4.png",
+      "legenda": "Arquitetura com Volumes Geométricos Puros"
+    },
+    {
+      "imagem": "assets/images/94GphaXCTN4D8xwUgC3j9yJMQ.jpg",
+      "legenda": "Sala de Estar Minimalista e Sofisticada"
+    },
+    {
+      "imagem": "assets/images/9EgtMwTy90XiO37XDmV6NV5O4Q.jpg",
+      "legenda": "Escritório Corporativo Criativo"
+    },
+    {
+      "imagem": "assets/images/Sm9D6gxhmcCNv6EsqiS2QbH18g.jpg",
+      "legenda": "Cozinha Integrada com Bancada em Quartzo"
+    },
+    {
+      "imagem": "assets/images/T8QS7WIP6K03vCnbuBi9s732Hw4.jpg",
+      "legenda": "Área Externa com Deck de Madeira e Fogo de Chão"
+    },
+    {
+      "imagem": "assets/images/NqTyx68km5muWT2fEMntIDY.jpg",
+      "legenda": "Casa de Campo com Estrutura Aparente"
+    },
+    {
+      "imagem": "assets/images/uqQ7iyPbTMRxIR2Enn8amm4U.jpg",
+      "legenda": "Entrada Social com Painel Ripado e Paisagismo"
+    },
+    {
+      "imagem": "assets/images/Xpl5uA7OXZrrorDgyzqVYFDCwk.jpg",
+      "legenda": "Espaço Relax com Banheira de Imersão e Luz Solar"
+    },
+    {
+      "imagem": "assets/images/cSukkgLXUiTHAgvRzUH6DUnw3k.jpg",
+      "legenda": "Terraço Panorâmico com Mobiliário Assinado"
+    },
+    {
+      "imagem": "assets/images/bdLj6BTkqJ70lAOHzWdzhnGWZ0.jpg",
+      "legenda": "Hall de Entrada com Pé-Direito Triplo"
+    },
+    {
+      "imagem": "assets/images/ePH7nQdaJHrrGfDDvO74Q9XT18.jpg",
+      "legenda": "Lounge Externo com Vista para o Pôr do Sol"
+    }
+  ]
+}

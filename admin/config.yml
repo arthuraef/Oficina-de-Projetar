@@ -14,6 +14,27 @@ display_url: "https://arthuraef.github.io/Oficina-de-Projetar/"
 logo_url: "../assets/images/yuLAfgpjAqVltISUSQXkPffkg.svg"
 
 collections:
+  - name: "carrossel"
+    label: "Carrossel de Imagens (Galeria)"
+    files:
+      - file: "content/carrossel.json"
+        label: "Configurações e Slides do Carrossel"
+        name: "carrossel_config"
+        fields:
+          - { label: "Transição Automática (Autoplay)", name: "autoplay", widget: "boolean", default: true }
+          - { label: "Tempo por Imagem (segundos)", name: "intervalo", widget: "number", default: 4, value_type: "float", min: 1, max: 30, step: 0.5 }
+          - { label: "Velocidade da Transição (segundos)", name: "velocidade", widget: "number", default: 0.8, value_type: "float", min: 0.1, max: 5, step: 0.1 }
+          - { label: "Exibir Setas de Navegação", name: "mostrar_setas", widget: "boolean", default: true }
+          - { label: "Exibir Indicadores (Bolinhas)", name: "mostrar_indicadores", widget: "boolean", default: false }
+          - { label: "Pausar ao passar o mouse", name: "pausar_no_hover", widget: "boolean", default: true }
+          - label: "Imagens do Carrossel"
+            name: "imagens"
+            widget: "list"
+            summary: "{{fields.legenda}} ({{fields.imagem}})"
+            fields:
+              - { label: "Arquivo de Imagem", name: "imagem", widget: "image" }
+              - { label: "Legenda / Texto Alternativo", name: "legenda", widget: "string", required: false }
+
   - name: "configuracoes"
     label: "Configurações Gerais & Contato"
     files:
